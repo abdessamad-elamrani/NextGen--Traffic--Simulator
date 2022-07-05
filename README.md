@@ -1,5 +1,11 @@
-# SCTP--Simulator
-SCTP--Simulator from typical SCTP ession, generates ~40k sessions, and send it through tcpreplay
+# Next Gen Traffic Simulator
+NG--Simulator is set of scripts that can be used to generate real traffic that mimic any customer traffic, the idea is take a sample pcap from a Customer, clean it up , and then generate a large pcap via pcap that can be tcpreplayed in lab, so can have a perfect simulation of customer issue.
+
+In this use case, 1 VM with 1 linux core can generate up to 40k session, and 0.5 Gbps bandwidth, if you want more, think about manually forking more threads ( nohup ... &), 
+   (because tcpreplay is not multihreaded by default ! )**
+   
+   
+In this specifica case, its about SCTP ession, generates ~40k sessions, and send it through tcpreplay
 
 This script **gen-40k-sctp.py**   will take a sample clean pcap  **orig-clean.pcap** and  generate 40k SCTP sessions from 1.1.x.y  Client ips  to 2 SCTP server.
 
